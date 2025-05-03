@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Headphones, BarChart } from 'lucide-react';
 
+
 const Hero = () => {
   const animatedTextRef = useRef<HTMLHeadingElement>(null);
 
@@ -87,9 +88,13 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2">
-              Get Started <ArrowRight size={20} />
-            </button>
+          <button
+  onClick={() => window.location.href = 'https://bob-front.vercel.app/dashboard'}
+  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
+>
+  Get Started <ArrowRight size={20} />
+</button>
+
             <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 border border-gray-700 hover:border-gray-600">
               Watch Demo
             </button>
